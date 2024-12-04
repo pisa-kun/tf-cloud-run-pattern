@@ -2,7 +2,7 @@ resource "google_sql_database_instance" "default" {
   name             = "nextjs-db-instance"
   database_version = "POSTGRES_13"
   region           = var.region
-
+  deletion_protection = false  # 削除保護を無効にする
   settings {
     tier = "db-f1-micro"
     ip_configuration {
