@@ -85,5 +85,21 @@ terraform apply
 ## Cloud Run + Cloud SQLをデプロイする
 Cloud Run上にNextjsのサンプルアプリをデプロイしてCloud SQL上のPostgreSQL DBと簡単な疎通を実施する。
 
+### main.tfの変更
+
+1. Cloud SQL インスタンスの作成
+google_sql_database_instance リソースで PostgreSQL インスタンスを作成します。インスタンスのタイプ（db-f1-micro）や IP 設定（IPv4を無効にし、接続に必要な設定を行います）。
+
+2. PostgreSQL データベースとユーザーの作成
+google_sql_database リソースでデータベースを作成し、google_sql_user でデータベースユーザーを設定します。
+
+3. Cloud Run サービスの作成
+Cloud Run サービスを作成し、Next.js アプリケーションのコンテナを指定します。環境変数として、Cloud SQL インスタンスの接続名 (DB_HOST) やデータベースの設定 (DB_USER, DB_PASSWORD, DB_NAME) を設定します。
+
+4. Cloud Run に対する IAM 設定
+google_cloud_run_service_iam_member リソースで roles/run.invoker の権限を付与し、allUsers に対してアクセスを許可します。
+
+
+
 ## Load Balancer + Cloud Run + Cloud SQLをデプロイする
 **Cloud Run + Cloud SQLをデプロイする**でデプロイした構成の前段にLoad Balancerを設置する。

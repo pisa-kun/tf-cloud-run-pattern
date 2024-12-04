@@ -14,3 +14,18 @@ variable "service_name" {
   type        = string
   default     = "nextjs-app"
 }
+
+variable "db_name" {
+  description = "PostgreSQL database name"
+  default     = "nextjs_db"
+}
+
+variable "db_user" {
+  description = "PostgreSQL user"
+  default     = "nextjs_user"
+}
+
+variable "db_password" {
+  description = "PostgreSQL password"
+  default     = "password"
+}
