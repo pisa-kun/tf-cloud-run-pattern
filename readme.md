@@ -99,7 +99,15 @@ Cloud Run サービスを作成し、Next.js アプリケーションのコン�
 4. Cloud Run に対する IAM 設定
 google_cloud_run_service_iam_member リソースで roles/run.invoker の権限を付与し、allUsers に対してアクセスを許可します。
 
+### nextjsの変更
 
+1. 必要なライブラリのインストール
+まず、TypeScript を使うために、pg ライブラリと TypeScript の型定義をインストールします。
+
+```bash
+npm install pg
+npm install --save-dev @types/pg
+```
 
 ## Load Balancer + Cloud Run + Cloud SQLをデプロイする
 **Cloud Run + Cloud SQLをデプロイする**でデプロイした構成の前段にLoad Balancerを設置する。
