@@ -109,5 +109,18 @@ npm install pg
 npm install --save-dev @types/pg
 ```
 
+### デプロイ
+1. dockerイメージのビルドとプッシュ
+```bash
+docker build -t gcr.io/${var.project_id}/nextjs-app .
+docker push gcr.io/${var.project_id}/nextjs-app
+```
+
+2. terraformの適用
+```bash
+terraform init
+terraform apply
+```
+
 ## Load Balancer + Cloud Run + Cloud SQLをデプロイする
 **Cloud Run + Cloud SQLをデプロイする**でデプロイした構成の前段にLoad Balancerを設置する。
