@@ -1,0 +1,32 @@
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Terraform variables files
+terraform.tfvars
+*.auto.tfvars
+
+# Terraform log files
+*.log
+
+# Terraform working directory
+.terraform/
+
+# Override files
+override.tf
+override.tf.json
+
+# Terraform lock file
+.terraform.lock.hcl
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Windows-specific files
+*.bak
+*.swp
