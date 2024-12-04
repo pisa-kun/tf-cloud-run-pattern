@@ -112,6 +112,7 @@ npm install --save-dev @types/pg
 ### デプロイ
 1. dockerイメージのビルドとプッシュ
 ```bash
+cd my-next-app
 docker build -t gcr.io/${var.project_id}/nextjs-app .
 docker push gcr.io/${var.project_id}/nextjs-app
 ```
@@ -121,6 +122,8 @@ docker push gcr.io/${var.project_id}/nextjs-app
 terraform init
 terraform apply
 ```
+
+db isntanceを立ち上げるのに13分
 
 ## Load Balancer + Cloud Run + Cloud SQLをデプロイする
 **Cloud Run + Cloud SQLをデプロイする**でデプロイした構成の前段にLoad Balancerを設置する。
