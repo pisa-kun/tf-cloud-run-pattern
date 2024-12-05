@@ -31,6 +31,12 @@ windowsの認証ファイルの場所
 C:\Users\<YourUsername>\AppData\Roaming\gcloud\credentials
 ```
 
+## Cloud RunとIAPを連携する(Load Balancerなし版)
+https://zenn.dev/iret/articles/cloud-run-iap-auth
+
+## Cloud RunとIAPを連携する(Load Balancerあり版)
+
+
 ## Cloud RunにNextjsのアプリをデプロイする
 NextjsのサンプルアプリをCloud Runでデプロイする。
 
@@ -127,3 +133,5 @@ db isntanceを立ち上げるのに13分
 
 ## Load Balancer + Cloud Run + Cloud SQLをデプロイする
 **Cloud Run + Cloud SQLをデプロイする**でデプロイした構成の前段にLoad Balancerを設置する。
+
+### IAPをLoad Balancerに連携する
