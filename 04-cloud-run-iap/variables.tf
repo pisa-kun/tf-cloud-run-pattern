@@ -7,7 +7,7 @@ variable "project_id" {
 variable "region" {
   description = "GCP region"
   type        = string
-  default     = "us-central1"
+  default     = "asia-northeast1"
 }
 
 variable "iap_user_email" {
@@ -43,4 +43,14 @@ variable "proxy_name" {
   description = "Google proxy name"
   type = string
   default = "iap-http-proxy"
+}
+
+variable "neg_name" {
+  description = "network endpoint group name"
+  type = string
+  default = "cloudrun-neg"
+}
+
+variable "domain_name" {
+  type = string
 }
