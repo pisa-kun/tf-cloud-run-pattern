@@ -20,4 +20,4 @@ RUN npm run build
 CMD ["npm", "start"]
 
 # コンテナがリッスンするポートを指定
-EXPOSE 3000
+EXPOSE 8080
