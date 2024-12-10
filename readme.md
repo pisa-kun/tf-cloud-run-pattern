@@ -131,6 +131,9 @@ terraform apply
 
 db isntanceを立ち上げるのに13分
 
+## Load Balancer + Cloud Runをデプロイする
+https://zenn.dev/ring_belle/articles/gcp-iap-cloudrun
+
 ## Load Balancer + Cloud Run + Cloud SQLをデプロイする
 **Cloud Run + Cloud SQLをデプロイする**でデプロイした構成の前段にLoad Balancerを設置する。
 
